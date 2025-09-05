@@ -23,3 +23,8 @@
             height: 100%;
             z-index: -1; /* Envía el canvas al fondo */
         }
+h1
+{
+    font-size: 90px;
+    color: red;
+}
