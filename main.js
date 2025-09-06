@@ -38,9 +38,9 @@ const colorPalette = [
 
 for (let i = 0; i < starCount; i++) {
     // Posición inicial aleatoria
-    positions[i * 3] = (Math.random() - 0.5) * 80; // X
-    positions[i * 3 + 1] = (Math.random() - 0.5) * 80;    // Y
-    positions[i * 3 + 2] = (Math.random() - 0.5) * 80; // Z
+    positions[i * 3] = (Math.random() - 0.5) * 60; // X
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 100;   // Y - Las distribuimos a lo largo de toda la altura
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 60; // Z
     
     // Asignar un color aleatorio de la paleta
     const randomColor = colorPalette[Math.floor(Math.random() * colorPalette.length)];
@@ -101,11 +101,17 @@ const clock = new THREE.Clock();
 const animate = () => {
     const elapsedTime = clock.getElapsedTime();
 
-    // Hacer que las estrellas titilen cambiando la opacidad
-    stars.material.opacity = 0.5 + Math.sin(elapsedTime * 0.5) * 0.2;
+    // Animación de partículas ascendentes
+    for (let i = 0; i < starCount; i++) {
+        const i3 = i * 3;
+        positions[i3 + 1] += 0.05; // Mover hacia arriba
 
-    // Movimiento de deriva lento y constante
-    stars.rotation.y = elapsedTime * 0.02;
+        // Si la partícula supera el límite superior, la reiniciamos abajo
+        if (positions[i3 + 1] > 50) {
+            positions[i3 + 1] = -50;
+        }
+    }
+    rainGeometry.attributes.position.needsUpdate = true; // ¡Importante! Notificar a Three.js que las posiciones han cambiado
 
     // Renderizar la escena
     renderer.render(scene, camera);
