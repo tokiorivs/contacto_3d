@@ -121,3 +121,15 @@ const animate = () => {
 };
 
 animate();
+
+// 6. Lógica para revertir el estado de los botones
+const buttons = document.querySelectorAll('.button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Después de 2 segundos (2000 milisegundos), quita el foco del botón.
+        setTimeout(() => {
+            button.blur();
+        }, 3000);
+    });
+});
