@@ -144,8 +144,8 @@ document
         "N:Guevara;Gabriel;Dr.;;\n" + 
         "FN:Dr. Gabriel Guevara\n" +
         "ORG:CIA Urology-Clinica Urosur\n" +
-        "TEL;TYPE=mobile:+51993052475\n" +
-        "EMAIL:urologo.escalante@gmail.com\n" +
+        "TEL;TYPE=mobile:+51965047592\n" +
+        "EMAIL:urologo.GabrielGuevara@gmail.com\n" +
         "END:VCARD";
 
     const blob = new Blob([vcardData], { type: "text/vcard" });

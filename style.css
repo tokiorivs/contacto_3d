@@ -22,10 +22,16 @@ body {
     border: 1px solid #444;
     border-radius: 10px;
     background-color: #242425; /* Nuevo color de fondo para el contenedor */
+    /* background-color: #242425; */ /* Color de fondo anterior */
+    /* background-image: url('./foto.png');  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden; /* Oculta lo que se salga del contenedor */
 }
 #bg-canvas {
     position: absolute;
+    /* position: absolute; */ /* Comentado para ocultar el canvas */
     top: 0;
     left: 0;
     width: 100%;
