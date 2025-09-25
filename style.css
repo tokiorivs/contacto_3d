@@ -87,6 +87,7 @@ h1
   background-color: #02D087;
   border-radius: 10px;
   width: 220px;
+  margin: 10px 0px;
 }
 .buttons_container {
   display: flex;
