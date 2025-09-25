@@ -133,3 +133,28 @@ buttons.forEach(button => {
         }, 3000);
     });
 });
+
+// Lógica para el botón de añadir contacto
+document
+    .getElementById("añadir_contacto")
+    .addEventListener("click", function () {
+    const vcardData =
+        "BEGIN:VCARD\n" +
+        "VERSION:3.0\n" +
+        "N:Guevara;Gabriel;Dr.;;\n" + 
+        "FN:Dr. Gabriel Guevara\n" +
+        "ORG:CIA Urology-Clinica Urosur\n" +
+        "TEL;TYPE=mobile:+51993052475\n" +
+        "EMAIL:urologo.escalante@gmail.com\n" +
+        "END:VCARD";
+
+    const blob = new Blob([vcardData], { type: "text/vcard" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "DrGuevara.vcf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+});

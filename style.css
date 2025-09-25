@@ -107,6 +107,9 @@ h1
   align-items: center;
   gap: 0px; /* Espacio entre el título y el subtítulo */
 }
+a.button-link {
+  text-decoration: none;
+}
 /* From Uiverse.io by marcelodolza */ 
 .button {
   --primary: #DF80A3;
