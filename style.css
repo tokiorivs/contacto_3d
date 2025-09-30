@@ -73,9 +73,9 @@ h1
     height: 150px;
     border-radius: 50%; /* Esto hace que la imagen sea redonda */
     object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
-    border: 5px solid white; /* Un borde opcional para que resalte */
-    box-shadow:  2px 2px 5px #C0B4DB,
-             -1px -1px 10px #d7eaff;
+    border: 5px solid #007BFF; /* Un borde opcional para que resalte */
+    /* box-shadow:  2px 2px 5px #C0B4DB,
+             -1px -1px 10px #d7eaff; */
 }
 .title{
   font-size: 32px;
