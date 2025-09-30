@@ -21,9 +21,9 @@ body {
     position: relative; /* Clave para posicionar el contenido y el canvas */
     border: 1px solid #444;
     border-radius: 10px;
-    background-color: #242425; /* Nuevo color de fondo para el contenedor */
+    background-color: #242425; 
     /* background-color: #242425; */ /* Color de fondo anterior */
-    /* background-image: url('./foto.png');  */
+    /* background-image: url('./fondo_estrellado.jpg');  */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -134,12 +134,12 @@ a.button-link {
   justify-content: center;
   position: relative;
   transition: all 0.3s ease;
-  min-width: 200px;
+  width: 220px;
   padding: 20px;
   height: 58px;
   font-family: "Arimo", sans-serif;
   font-style: normal;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   color: #6C738F;
 }
