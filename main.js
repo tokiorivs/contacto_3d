@@ -179,3 +179,24 @@ citasOverlay.addEventListener('click', (event) => {
         closeModal();
     }
 });
+
+// Lógica para el modal de llamada
+const llamadaBtn = document.getElementById('llamada-btn');
+const llamadaOverlay = document.getElementById('llamada-overlay');
+const closeLlamadaModalBtn = document.getElementById('close-llamada-modal');
+
+llamadaBtn.addEventListener('click', () => {
+    llamadaOverlay.classList.remove('hidden');
+});
+
+const closeLlamadaModal = () => {
+    llamadaOverlay.classList.add('hidden');
+};
+
+closeLlamadaModalBtn.addEventListener('click', closeLlamadaModal);
+
+llamadaOverlay.addEventListener('click', (event) => {
+    if (event.target === llamadaOverlay) {
+        closeLlamadaModal();
+    }
+});

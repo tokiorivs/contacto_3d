@@ -159,8 +159,8 @@
       </a>
 
       <!-- Botón Llamada -->
-      <a href="tel:+51965047592" class="button-link">
-        <button class="button">
+      <!-- <a href="tel:+51965047592" class="button-link"> -->
+        <button class="button" id="llamada-btn">
           <div class="outline"></div>
           <div class="state state--default">
             <div class="icon">
@@ -196,7 +196,7 @@
             </p>
           </div>
         </button>
-      </a>
+      <!-- </a> -->
 
 
       
@@ -285,6 +285,18 @@
         <a href="https://wa.me/51965047592?text=Hola%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="modal-button">Arequipa</a>
         <a href="tel:+51965047592" target="_blank" rel="noopener noreferrer" class="modal-button">Juliaca</a>
         <a href="https://drguevaraurologo.com/contacto/" target="_blank" rel="noopener noreferrer" class="modal-button">Lima</a>
+      </div>
+    </div>
+
+    <!-- Modal para Llamada -->
+    <div id="llamada-overlay" class="citas-overlay hidden">
+      <div class="citas-modal">
+        <button id="close-llamada-modal" class="close-button">&times;</button>
+        <h3>Realizar una llamada</h3>
+        <!-- Asumiendo que se quiere llamar a los mismos números/lugares -->
+        <a href="tel:+51965047592" target="_blank" rel="noopener noreferrer" class="modal-button">Arequipa</a>
+        <a href="tel:+51965047592" target="_blank" rel="noopener noreferrer" class="modal-button">Juliaca</a>
+        <a href="tel:+51965047592" target="_blank" rel="noopener noreferrer" class="modal-button">Lima</a>
       </div>
     </div>
 
