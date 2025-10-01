@@ -158,3 +158,24 @@ document
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 });
+
+// Lógica para el modal de agendar cita
+const agendarCitaBtn = document.getElementById('agendar-cita-btn');
+const citasOverlay = document.getElementById('citas-overlay');
+const closeCitasModalBtn = document.getElementById('close-citas-modal');
+
+agendarCitaBtn.addEventListener('click', () => {
+    citasOverlay.classList.remove('hidden');
+});
+
+const closeModal = () => {
+    citasOverlay.classList.add('hidden');
+};
+
+closeCitasModalBtn.addEventListener('click', closeModal);
+
+citasOverlay.addEventListener('click', (event) => {
+    if (event.target === citasOverlay) {
+        closeModal();
+    }
+});

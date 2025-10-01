@@ -28,8 +28,7 @@
     <div class="buttons_container">
       <!-- Botón Agendar Cita -->
       <!-- TODO: Reemplaza "#" con el enlace real para agendar citas -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="button-link">
-        <button class="button">
+        <button class="button" id="agendar-cita-btn">
           <div class="outline"></div>
           <div class="state state--default">
             <div class="icon">
@@ -68,8 +67,7 @@
             </p>
           </div>
         </button>
-      </a>
-      <!-- <div class="citas_container"></div> -->
+
       <!-- Botón Añadir Contacto -->
       <button class="button" id="añadir_contacto">
         <div class="outline"></div>
@@ -276,10 +274,19 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 100 40"><text x="50" y="50" font-family="Inria Sans, Arial Narrow, sans-serif" font-size="80" font-weight="bold" text-anchor="middle" fill="#007BFF">CIA</text></svg>
       </a>
       </div> 
-     
     </div>
     </div>
   
+    <!-- Modal para Agendar Cita -->
+    <div id="citas-overlay" class="citas-overlay hidden">
+      <div class="citas-modal">
+        <button id="close-citas-modal" class="close-button">&times;</button>
+        <h3>Agendar Cita</h3>
+        <a href="https://wa.me/51965047592?text=Hola%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="modal-button">Arequipa</a>
+        <a href="tel:+51965047592" target="_blank" rel="noopener noreferrer" class="modal-button">Juliaca</a>
+        <a href="https://drguevaraurologo.com/contacto/" target="_blank" rel="noopener noreferrer" class="modal-button">Lima</a>
+      </div>
+    </div>
 
     <script type="module" src="main.js"></script>
 </body>
